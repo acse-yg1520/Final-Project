@@ -21,7 +21,7 @@ plot(B(101,:))
 
 %% Compute normalized power spectrum
 img_power = fftshift(fft2(B));
-img_power_nor = (abs(img_power)/(M*N)).^2; % compute normalised psd                                              % Normalize
+img_power_nor = (abs(img_power)/(M*N)).^2; % Compute normalised psd                                           
 
 %% Apply zero padding to adjust non-square dimensions
 diff = abs(M-N);  % difference of rows and columns numbers
