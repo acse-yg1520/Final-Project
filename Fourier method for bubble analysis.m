@@ -3,7 +3,7 @@ img = imresize(img, 0.5);      % Resize the image for faster processing
 img = rgb2gray(img);           % Convert RGB image to grayscale
 %imshow(img)
 
-bknd_img = imread('IMG_5784.JPG');  % Read the background image
+bknd_img = imread('IMG_9399.JPG');  % Read the background image
 bknd_img = rgb2gray(bknd_img);      % Convert RGB image to grayscale
 T = adaptthresh(bknd_img, 0.4 , 'ForegroundPolarity', 'dark'); %use background correction to help the gray threshold
 BW = imbinarize(img,imresize(T, 0.5)); % Image binarization
@@ -14,15 +14,19 @@ B = imclose(~BW,se);
 B = imfill(B,'holes');
 
 % Process image size information
-[M N] = size(B); 
+[M N] = size(B);
 
 % Plot the pulse train obtained from the image
-plot(B(101,:))
+figure;
+hold on;
+imshow(B);
+line([0,3000],[201,201],'Color','r','LineWidth',2)
+hold off
+plot(B(201,:))
 
 %% Compute normalized power spectrum
 img_power = fftshift(fft2(B));
-img_power_nor = (abs(img_power)/(M*N)).^2; % Compute normalised psd                                           
-
+img_power_nor = (abs(img_power)/(M*N)).^2; % compute normalised psd
 %% Apply zero padding to adjust non-square dimensions
 diff = abs(M-N);  % difference of rows and columns numbers
 maxD = max(M,N);  % maximum of dimensions
@@ -57,12 +61,14 @@ for i = 1 : maxD
   end
 end
 pf = pf./ count; % Get average
+pf = 10*log(pf)  % Convert to dB scale
 
 %% Plot the normalised psd
 figure; semilogy(pf)
 title('Average Radial Profile', 'FontSize', 10);
 xlabel('Frequency', 'FontSize', 10);
 ylabel('Normalised PSD', 'FontSize', 10);
+axis([0 1600 -300 -50])
 
 % Model D32 vs BW
 % D32 = 3.7./(sf.^1.1);
