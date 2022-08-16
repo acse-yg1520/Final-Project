@@ -52,7 +52,7 @@ end
 %% Separate the overlapping objects by connecting the contour points
 function splited = separation(x,y,perimeter,img)
 
-% Find the candidate contour points for split
+% Find the candidate concave points for split
 gap = floor(length(x)/50);
 X = x(1:gap:end,:);
 Y = y(1:gap:end,:);
@@ -76,7 +76,7 @@ for i = 1:length(X)
     end
 end
 
-% Determine the exact contour points
+% Determine the exact split points
 dic = {};
 k = 1;
 for i = 1:length(contourp)-1
