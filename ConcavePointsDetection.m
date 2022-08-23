@@ -18,9 +18,9 @@ B = imfill(B,'holes');
 while bool >= 1
 
   for i = idx
-        thisBoundary = boundaries{i}; 
-	    x = thisBoundary(:,2); 
-	    y = thisBoundary(:,1); 
+        thisBoundary = boundaries{i};
+	    x = thisBoundary(:,2);
+	    y = thisBoundary(:,1);
         perimeter = props(i).Perimeter
         splited = separation(x,y,perimeter,B)
         B = splited;
@@ -52,7 +52,7 @@ end
 %% Separate the overlapping objects by connecting the contour points
 function splited = separation(x,y,perimeter,img)
 
-% Find the candidate contour points for split
+% Find the candidate concave points for split
 gap = floor(length(x)/50);
 X = x(1:gap:end,:);
 Y = y(1:gap:end,:);
@@ -61,7 +61,7 @@ n = 1;
 contourp = []; k = 1;
 for i = 1:length(X)
     xn = []; yn = [];
-    m = 1; 
+    m = 1;
     for theta = 0:5:360
        xn(m) = cout(i,2) + 20*cosd(theta);
        yn(m) = cout(i,1) + 20*sind(theta);
@@ -76,7 +76,7 @@ for i = 1:length(X)
     end
 end
 
-% Determine the exact contour points
+% Determine the exact split points
 dic = {};
 k = 1;
 for i = 1:length(contourp)-1
@@ -92,7 +92,7 @@ for i = 1:length(contourp)-1
         k = k+1
     end
 end
-index = find([dic{:,3}] == min( cell2mat(dic(1:end,3)))); 
+index = find([dic{:,3}] == min( cell2mat(dic(1:end,3))));
 
 
 % Connect the contour points
