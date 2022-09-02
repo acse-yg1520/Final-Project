@@ -1,6 +1,6 @@
 #  Bubble Analyser
 
-Bubble Analyser is a Matlab Application presented by Mesa et al. (2022) for processing and quantifying bubble images, normally taken for assessing froth flotation equipment. The one dimensional Discrete Fourier Transform (Vinnett et.al, 2018), circles detection method (Wang et al., 2022) combined with Watershed segmentation and partial Watershed are implemented to estimate the Sauter mean diameter of bubbles are implemented in this software.
+Bubble Analyser is a Matlab Application presented by Mesa et al. (2022) for processing and quantifying bubble images, normally taken for assessing froth flotation equipment. The one dimensional Discrete Fourier Transform (Vinnett et.al, 2018), circles detection method (Wang et al., 2022) combined with Watershed segmentation and partial Watershed are implemented to estimate the Sauter mean diameter of bubbles are implemented in this software. For more details about installation and usage, you can refer to `Bubble Analyser Manual.pdf`.
 
 ## Installation
 
