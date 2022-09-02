@@ -13,7 +13,7 @@ If you have added the ‘Bubble Analyser’ folder to your Matlab path, you can 
 
 Bubble Analyser was developed for Matlab 2020, or newer. However, it might run with older versions of Matlab. Bubble Analyser uses the following Toolboxes: Image Processing and Signal Processing.
 
-You can find the sample bubble images inside the folder `sample_photos`.
+You can find the sample bubble images inside the folder `Sample_photos`.
 
 ## Reference
 Mesa, Diego, Quintanilla, Paulina, and Reyes, Francisco (2022). Bubble Analyser — An open-source software for bubble size measurement using image analysis. Minerals Engineering, Volume 180, 2022, 107497, ISSN 0892-6875 https://doi.org/10.1016/j.mineng.2022.107497.
