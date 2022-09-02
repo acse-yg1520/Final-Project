@@ -20,7 +20,7 @@ Mesa, Diego, Quintanilla, Paulina, and Reyes, Francisco (2022). Bubble Analyser 
 
 L.Vinnett, J. Sovechles, C.O. Gomez, K.E. Waters, An image analysis approach to determine average bubble sizes using one-dimensional Fourier analysis, Minerals Engineering, Volume 126, 2018, Pages 160-166, ISSN 0892-6875, https://doi.org/10.1016/j.mineng.2018.06.030.
 
-Wang, J.; Forbes, G.; Forbes, E. Frother Characterization Using a Novel Bubble Size Measurement Technique. Appl. Sci. 2022, 12, 750. https://doi.org/10.3390/app12020750
+Wang, J.; Forbes, G.; Forbes, E. Frother Characterization Using a Novel Bubble Size Measurement Technique. Applied. Sci. 2022, 12, 750. https://doi.org/10.3390/app12020750
 
 ## License
 Bubble Analyser is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation version 3 only of the License.
